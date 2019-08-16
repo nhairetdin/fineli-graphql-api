@@ -1,0 +1,20 @@
+type Food {
+  foodid: Int
+  foodname: String
+  foodtype: String
+  process: String
+  edport: Int
+  igclass: String
+  igclassp: String
+  fuclass: String
+  fuclassp: String
+}
+
+input FoodWhere {
+  foodid: Int
+}
+
+type Query {
+  getAllFoods(limit: Int): [Food]
+  getFoodById(where: FoodWhere, limit: Int): Food
+}
