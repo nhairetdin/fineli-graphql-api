@@ -1,6 +1,7 @@
 # GraphQL API for Fineli data (mysql-database)
-Tables added:
-### food (elintarvike)
+Using dataloader-sequelize and graphql-sequelize to solve n+1 problem
+## Models added:
+### Food (table: elintarvike)
 Queries:
 
 `getAllFoods(limit: Int)`
