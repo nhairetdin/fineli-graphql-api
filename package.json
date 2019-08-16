@@ -1,0 +1,45 @@
+{
+  "name": "fineli_graphql_api",
+  "version": "1.0.0",
+  "description": "GraphQL-API for Fineli-database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --exec 'babel-node ./src/index.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "api",
+    "mysql",
+    "sequelize",
+    "apollo-server"
+  ],
+  "author": "Nico Hairetdin",
+  "license": "MIT",
+  "dependencies": {
+    "@types/bluebird": "^3.5.27",
+    "@types/graphql": "^14.2.3",
+    "@types/sequelize": "^4.28.4",
+    "apollo-server-express": "^2.8.1",
+    "await-to-js": "^2.1.1",
+    "bcrypt": "^3.0.6",
+    "dataloader-sequelize": "^2.0.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "graphql": "^14.4.2",
+    "graphql-relay": "^0.6.0",
+    "graphql-sequelize": "^9.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.19.1",
+    "reflect-metadata": "^0.1.13",
+    "schemaglue": "^4.0.4",
+    "sequelize": "^5.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
