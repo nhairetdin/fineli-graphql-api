@@ -1,5 +1,7 @@
 import { Query } from './food.query'
+import { FoodMap } from './food.map'
 
 export const resolver = {
-  Query: Query
+  Query: Query,
+  Food: FoodMap
 }

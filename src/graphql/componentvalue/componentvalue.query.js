@@ -2,6 +2,12 @@ import { resolver } from 'graphql-sequelize'
 import { Componentvalue } from '../../models'
 
 export const Query = {
-  getComponentvalue: resolver(Componentvalue),
-  getComponentvalueById: resolver(Componentvalue)
+  componentvalue: resolver(Componentvalue, {
+    before: async (findOptions, args, context, info) => {
+      return findOptions
+    },
+    after: async (result) => {
+      return result
+    }
+  })
 }

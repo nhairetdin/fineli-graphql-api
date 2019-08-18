@@ -1,17 +1,20 @@
 type Componentvalue {
   id: Int
   foodid: Int
-  eufdname: String
+  eufdname(name: String): String
   bestloc: Float
   acqtype: String
   methtype: String
+  food: Food
 }
 
 input ComponentvalueWhere {
+  id: Int
   foodid: Int
+  eufdname: String
+  bestloc: Float
 }
 
 type Query {
-  getComponentvalue: Componentvalue
-  getComponentvalueById(where: ComponentvalueWhere, limit: Int): [Componentvalue]
+  componentvalue(where: ComponentvalueWhere): [Componentvalue]
 }

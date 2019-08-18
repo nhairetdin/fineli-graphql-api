@@ -8,6 +8,7 @@ type Food {
   igclassp: String
   fuclass: String
   fuclassp: String
+  componentvalues: [Componentvalue]
 }
 
 input FoodWhere {
@@ -15,6 +16,5 @@ input FoodWhere {
 }
 
 type Query {
-  getAllFoods(limit: Int): [Food]
-  getFoodById(where: FoodWhere, limit: Int): Food
+  food(where: FoodWhere, limit: Int): [Food]
 }
