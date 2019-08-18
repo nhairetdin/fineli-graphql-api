@@ -2,8 +2,13 @@
 Using dataloader-sequelize and graphql-sequelize to solve n+1 problem
 ## Models added:
 ### Food (table: elintarvike)
+
 Queries:
 
-`getAllFoods(limit: Int)`
+`food(where: FoodWhere, limit: Int): [Food]`
 
-`getFoodById(where: FoodWhere {id: Int})`
+### Componentvalue (table: ravintoarvo)
+
+Queries:
+
+`componentvalue(where: ComponentvalueWhere, limit: Int): [Componentvalue]`
