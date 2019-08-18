@@ -28,3 +28,23 @@
       }
     }
 
+## Get componentvalues with "PROT" between x - y and associated foods
+
+    query b {
+      componentvalue(
+        limit: 100,
+        where: {
+          eufdname:"PROT",
+          bestlocMoreThan: 50,
+          bestlocLessThan: 60
+        }
+      ) {
+        eufdname
+        bestloc
+        foodid
+        food {
+          foodname
+        }
+      }
+    }
+
