@@ -8,22 +8,22 @@ export const Query = {
   componentvalue: resolver(Componentvalue, {
     before: async (findOptions, args, context, info) => {
       const conditions = createConditions(findOptions, args)
-      const findOptionsCleaned = cleanFindOptions(findOptions, conditions)
+      const where = cleanFindOptions(findOptions.where, conditions)
 
       if (conditions.bestlocMoreThan) {
-        findOptionsCleaned.where.bestloc = {
+        where.bestloc = {
           [Op.gt]: conditions.bestlocMoreThan
         }
       }
 
       if (conditions.bestlocLessThan) {
-        findOptionsCleaned.where.bestloc = {
-          ...findOptionsCleaned.where.bestloc,
+        where.bestloc = {
+          ...where.bestloc,
           [Op.lt]: conditions.bestlocLessThan
         }
       }
-
-      return findOptionsCleaned
+      findOptions.where = where
+      return findOptions
     },
     after: async (result) => {
       return result
@@ -42,12 +42,12 @@ const createConditions = (findOptions, args) => {
   return conditions
 }
 
-const cleanFindOptions = (findOptions, conditions) => {
+const cleanFindOptions = (where, conditions) => {
   Object.keys(conditions)
     .forEach(condition => {
-      if (findOptions.where[condition]) {
-        delete findOptions.where[condition]
+      if (where[condition]) {
+        delete where[condition]
       }
     })
-  return findOptions
+  return where
 }
