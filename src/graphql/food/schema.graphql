@@ -13,6 +13,7 @@ type Food {
 
 input FoodWhere {
   foodid: Int
+  foodnameContains: String
 }
 
 type Query {
