@@ -48,3 +48,13 @@
       }
     }
 
+## Get all components that belong to vitamins (baseclass)
+
+    query asd {
+      component(where: { cmpclassp: "VITAM" }) {
+        eufdname
+        compunit
+        cmpclass
+        cmpclassp
+      }
+    }

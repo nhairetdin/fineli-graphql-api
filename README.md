@@ -12,3 +12,9 @@ Queries:
 Queries:
 
 `componentvalue(where: ComponentvalueWhere, limit: Int): [Componentvalue]`
+
+### Component (table: ravintotekija)
+
+Queries:
+
+`component(where: ComponentWhere): [Component]`

@@ -1,0 +1,18 @@
+type Component {
+  eufdname: String
+  compunit: String
+  cmpclass: String
+  cmpclassp: String
+  componentvalues: [Componentvalue]
+}
+
+input ComponentWhere {
+  eufdname: String
+  compunit: String
+  cmpclass: String
+  cmpclassp: String
+}
+
+type Query {
+  component(where: ComponentWhere): [Component]
+}

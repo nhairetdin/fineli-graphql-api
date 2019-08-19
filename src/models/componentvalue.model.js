@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize'
 import { Food } from './food.model'
+import { Component } from './component.model'
 
 export class Componentvalue extends Sequelize.Model {
   static init(sequelize, DataTypes) {
@@ -45,6 +46,11 @@ export class Componentvalue extends Sequelize.Model {
     this.belongsTo(Food, {
       foreignKey: 'foodid',
       sourceKey: 'foodid'
+    })
+
+    this.belongsTo(Component, {
+      foreignKey: 'eufdname',
+      sourceKey: 'eufdname'
     })
   }
 }

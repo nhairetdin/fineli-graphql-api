@@ -6,6 +6,7 @@ type Componentvalue {
   acqtype: String
   methtype: String
   food: Food
+  component: Component
 }
 
 input ComponentvalueWhere {
