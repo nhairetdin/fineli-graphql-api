@@ -44,5 +44,3 @@ Object.keys(models).forEach(modelName => {
 Object.keys(models).forEach(model => {
   module.exports[model] = models[model]
 })
-
-Object.keys(models).forEach(model => console.log(model, models[model].associations))

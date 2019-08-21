@@ -7,7 +7,6 @@ type Componentvalue {
   methtype: String
   food: Food
   component: Component
-  foodbase: Foodbase
 }
 
 input ComponentvalueWhere {
