@@ -57,6 +57,7 @@ type Foodbase {
   chole: Float
   stert: Float
   componentvalues: [Componentvalue]
+  food: Food
 }
 
 input FoodbaseWhere {

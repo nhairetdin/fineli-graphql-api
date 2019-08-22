@@ -82,9 +82,9 @@ export class Foodbase extends Sequelize.Model {
       sourceKey: 'foodid'
     })
 
-    // this.belongsTo(Food, {
-    //   foreignKey: 'foodid',
-    //   sourceKey: 'foodid'
-    // })
+    this.belongsTo(Food, {
+      foreignKey: 'foodid',
+      sourceKey: 'foodid'
+    })
   }
 }
