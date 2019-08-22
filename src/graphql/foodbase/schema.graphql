@@ -61,6 +61,7 @@ type Foodbase {
 
 input FoodbaseWhere {
   foodname: String
+  foodnameContains: String
   enerc: Float
   choavl: Float
   fat: Float
